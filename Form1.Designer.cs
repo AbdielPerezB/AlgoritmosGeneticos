@@ -28,26 +28,192 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.lblGeneracion = new System.Windows.Forms.Label();
+            this.gbAltura = new System.Windows.Forms.GroupBox();
+            this.rbBajo = new System.Windows.Forms.RadioButton();
+            this.rbMedio = new System.Windows.Forms.RadioButton();
+            this.rbAlto = new System.Windows.Forms.RadioButton();
+            this.gbColorFlor = new System.Windows.Forms.GroupBox();
+            this.rbAmarillo = new System.Windows.Forms.RadioButton();
+            this.rbRojo = new System.Windows.Forms.RadioButton();
+            this.rbAzul = new System.Windows.Forms.RadioButton();
+            this.gbTamañoFlor = new System.Windows.Forms.GroupBox();
+            this.rbGrande = new System.Windows.Forms.RadioButton();
+            this.rbPequeno = new System.Windows.Forms.RadioButton();
+            this.rbNormal = new System.Windows.Forms.RadioButton();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.gbAltura.SuspendLayout();
+            this.gbColorFlor.SuspendLayout();
+            this.gbTamañoFlor.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblGeneracion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(288, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Abdi estuvo aquí";
+            this.lblGeneracion.AutoSize = true;
+            this.lblGeneracion.Location = new System.Drawing.Point(33, 133);
+            this.lblGeneracion.Name = "lblGeneracion";
+            this.lblGeneracion.Size = new System.Drawing.Size(70, 15);
+            this.lblGeneracion.TabIndex = 0;
+            this.lblGeneracion.Text = "Generación:";
+            // 
+            // gbAltura
+            // 
+            this.gbAltura.Controls.Add(this.rbBajo);
+            this.gbAltura.Controls.Add(this.rbMedio);
+            this.gbAltura.Controls.Add(this.rbAlto);
+            this.gbAltura.Location = new System.Drawing.Point(33, 27);
+            this.gbAltura.Name = "gbAltura";
+            this.gbAltura.Size = new System.Drawing.Size(172, 100);
+            this.gbAltura.TabIndex = 1;
+            this.gbAltura.TabStop = false;
+            this.gbAltura.Text = "Altura:";
+            // 
+            // rbBajo
+            // 
+            this.rbBajo.AutoSize = true;
+            this.rbBajo.Location = new System.Drawing.Point(14, 68);
+            this.rbBajo.Name = "rbBajo";
+            this.rbBajo.Size = new System.Drawing.Size(48, 19);
+            this.rbBajo.TabIndex = 2;
+            this.rbBajo.TabStop = true;
+            this.rbBajo.Text = "Bajo";
+            this.rbBajo.UseVisualStyleBackColor = true;
+            // 
+            // rbMedio
+            // 
+            this.rbMedio.AutoSize = true;
+            this.rbMedio.Location = new System.Drawing.Point(14, 45);
+            this.rbMedio.Name = "rbMedio";
+            this.rbMedio.Size = new System.Drawing.Size(59, 19);
+            this.rbMedio.TabIndex = 1;
+            this.rbMedio.TabStop = true;
+            this.rbMedio.Text = "Medio";
+            this.rbMedio.UseVisualStyleBackColor = true;
+            // 
+            // rbAlto
+            // 
+            this.rbAlto.AutoSize = true;
+            this.rbAlto.Location = new System.Drawing.Point(14, 22);
+            this.rbAlto.Name = "rbAlto";
+            this.rbAlto.Size = new System.Drawing.Size(47, 19);
+            this.rbAlto.TabIndex = 0;
+            this.rbAlto.TabStop = true;
+            this.rbAlto.Text = "Alto";
+            this.rbAlto.UseVisualStyleBackColor = true;
+            // 
+            // gbColorFlor
+            // 
+            this.gbColorFlor.Controls.Add(this.rbAmarillo);
+            this.gbColorFlor.Controls.Add(this.rbRojo);
+            this.gbColorFlor.Controls.Add(this.rbAzul);
+            this.gbColorFlor.Location = new System.Drawing.Point(228, 27);
+            this.gbColorFlor.Name = "gbColorFlor";
+            this.gbColorFlor.Size = new System.Drawing.Size(172, 100);
+            this.gbColorFlor.TabIndex = 2;
+            this.gbColorFlor.TabStop = false;
+            this.gbColorFlor.Text = "Color de flor:";
+            // 
+            // rbAmarillo
+            // 
+            this.rbAmarillo.AutoSize = true;
+            this.rbAmarillo.Location = new System.Drawing.Point(16, 68);
+            this.rbAmarillo.Name = "rbAmarillo";
+            this.rbAmarillo.Size = new System.Drawing.Size(70, 19);
+            this.rbAmarillo.TabIndex = 5;
+            this.rbAmarillo.TabStop = true;
+            this.rbAmarillo.Text = "Amarillo";
+            this.rbAmarillo.UseVisualStyleBackColor = true;
+            // 
+            // rbRojo
+            // 
+            this.rbRojo.AutoSize = true;
+            this.rbRojo.Location = new System.Drawing.Point(16, 22);
+            this.rbRojo.Name = "rbRojo";
+            this.rbRojo.Size = new System.Drawing.Size(49, 19);
+            this.rbRojo.TabIndex = 3;
+            this.rbRojo.TabStop = true;
+            this.rbRojo.Text = "Rojo";
+            this.rbRojo.UseVisualStyleBackColor = true;
+            // 
+            // rbAzul
+            // 
+            this.rbAzul.AutoSize = true;
+            this.rbAzul.Location = new System.Drawing.Point(16, 45);
+            this.rbAzul.Name = "rbAzul";
+            this.rbAzul.Size = new System.Drawing.Size(48, 19);
+            this.rbAzul.TabIndex = 4;
+            this.rbAzul.TabStop = true;
+            this.rbAzul.Text = "Azul";
+            this.rbAzul.UseVisualStyleBackColor = true;
+            // 
+            // gbTamañoFlor
+            // 
+            this.gbTamañoFlor.Controls.Add(this.rbGrande);
+            this.gbTamañoFlor.Controls.Add(this.rbPequeno);
+            this.gbTamañoFlor.Controls.Add(this.rbNormal);
+            this.gbTamañoFlor.Location = new System.Drawing.Point(425, 27);
+            this.gbTamañoFlor.Name = "gbTamañoFlor";
+            this.gbTamañoFlor.Size = new System.Drawing.Size(172, 100);
+            this.gbTamañoFlor.TabIndex = 2;
+            this.gbTamañoFlor.TabStop = false;
+            this.gbTamañoFlor.Text = "Tamaño de la flor:";
+            // 
+            // rbGrande
+            // 
+            this.rbGrande.AutoSize = true;
+            this.rbGrande.Location = new System.Drawing.Point(16, 68);
+            this.rbGrande.Name = "rbGrande";
+            this.rbGrande.Size = new System.Drawing.Size(63, 19);
+            this.rbGrande.TabIndex = 5;
+            this.rbGrande.TabStop = true;
+            this.rbGrande.Text = "Grande";
+            this.rbGrande.UseVisualStyleBackColor = true;
+            // 
+            // rbPequeno
+            // 
+            this.rbPequeno.AutoSize = true;
+            this.rbPequeno.Location = new System.Drawing.Point(16, 22);
+            this.rbPequeno.Name = "rbPequeno";
+            this.rbPequeno.Size = new System.Drawing.Size(72, 19);
+            this.rbPequeno.TabIndex = 3;
+            this.rbPequeno.TabStop = true;
+            this.rbPequeno.Text = "Pequeño";
+            this.rbPequeno.UseVisualStyleBackColor = true;
+            // 
+            // rbNormal
+            // 
+            this.rbNormal.AutoSize = true;
+            this.rbNormal.Location = new System.Drawing.Point(16, 45);
+            this.rbNormal.Name = "rbNormal";
+            this.rbNormal.Size = new System.Drawing.Size(65, 19);
+            this.rbNormal.TabIndex = 4;
+            this.rbNormal.TabStop = true;
+            this.rbNormal.Text = "Normal";
+            this.rbNormal.UseVisualStyleBackColor = true;
+            // 
+            // timer
+            // 
+            this.timer.Interval = 2000;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.gbTamañoFlor);
+            this.Controls.Add(this.gbColorFlor);
+            this.Controls.Add(this.gbAltura);
+            this.Controls.Add(this.lblGeneracion);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.gbAltura.ResumeLayout(false);
+            this.gbAltura.PerformLayout();
+            this.gbColorFlor.ResumeLayout(false);
+            this.gbColorFlor.PerformLayout();
+            this.gbTamañoFlor.ResumeLayout(false);
+            this.gbTamañoFlor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -55,6 +221,19 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblGeneracion;
+        private GroupBox gbAltura;
+        private RadioButton rbBajo;
+        private RadioButton rbMedio;
+        private RadioButton rbAlto;
+        private GroupBox gbColorFlor;
+        private RadioButton rbAmarillo;
+        private RadioButton rbRojo;
+        private RadioButton rbAzul;
+        private GroupBox gbTamañoFlor;
+        private RadioButton rbGrande;
+        private RadioButton rbPequeno;
+        private RadioButton rbNormal;
+        private System.Windows.Forms.Timer timer;
     }
 }
