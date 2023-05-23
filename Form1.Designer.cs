@@ -43,9 +43,16 @@
             this.rbPequeno = new System.Windows.Forms.RadioButton();
             this.rbNormal = new System.Windows.Forms.RadioButton();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.aplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuInicio = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuParo = new System.Windows.Forms.ToolStripMenuItem();
             this.gbAltura.SuspendLayout();
             this.gbColorFlor.SuspendLayout();
             this.gbTamañoFlor.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblGeneracion
@@ -195,6 +202,56 @@
             // timer
             // 
             this.timer.Interval = 2000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.aplicaciónToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuSalir});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // mnuSalir
+            // 
+            this.mnuSalir.Name = "mnuSalir";
+            this.mnuSalir.Size = new System.Drawing.Size(180, 22);
+            this.mnuSalir.Text = "Salir";
+            this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
+            // 
+            // aplicaciónToolStripMenuItem
+            // 
+            this.aplicaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuInicio,
+            this.mnuParo});
+            this.aplicaciónToolStripMenuItem.Name = "aplicaciónToolStripMenuItem";
+            this.aplicaciónToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.aplicaciónToolStripMenuItem.Text = "Aplicación";
+            // 
+            // mnuInicio
+            // 
+            this.mnuInicio.Name = "mnuInicio";
+            this.mnuInicio.Size = new System.Drawing.Size(180, 22);
+            this.mnuInicio.Text = "Inicio";
+            this.mnuInicio.Click += new System.EventHandler(this.mnuInicio_Click);
+            // 
+            // mnuParo
+            // 
+            this.mnuParo.Name = "mnuParo";
+            this.mnuParo.Size = new System.Drawing.Size(180, 22);
+            this.mnuParo.Text = "Parar";
+            this.mnuParo.Click += new System.EventHandler(this.mnuParo_Click);
             // 
             // Form1
             // 
@@ -205,8 +262,10 @@
             this.Controls.Add(this.gbColorFlor);
             this.Controls.Add(this.gbAltura);
             this.Controls.Add(this.lblGeneracion);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Algoritmos Genéticos";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.gbAltura.ResumeLayout(false);
             this.gbAltura.PerformLayout();
@@ -214,6 +273,8 @@
             this.gbColorFlor.PerformLayout();
             this.gbTamañoFlor.ResumeLayout(false);
             this.gbTamañoFlor.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +296,11 @@
         private RadioButton rbPequeno;
         private RadioButton rbNormal;
         private System.Windows.Forms.Timer timer;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem archivoToolStripMenuItem;
+        private ToolStripMenuItem mnuSalir;
+        private ToolStripMenuItem aplicaciónToolStripMenuItem;
+        private ToolStripMenuItem mnuInicio;
+        private ToolStripMenuItem mnuParo;
     }
 }
